@@ -1,0 +1,203 @@
+/* ================= BASE (DESKTOP FIRST) ================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  background: #eafaf6;
+  overflow: hidden;
+}
+
+/* Curved background */
+.hero-curve {
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  max-width: 900px;
+  max-height: 900px;
+  background: #d6f5f0;
+  border-radius: 50%;
+  top: -20%;
+  right: -20%;
+  z-index: 0;
+}
+
+/* LEFT CONTENT */
+.hero-left {
+  flex: 1;
+  padding: 6rem 5vw;
+  z-index: 1;
+}
+
+.hero-left h1 {
+  font-size: clamp(2.8rem, 4vw, 4rem);
+}
+
+.hero-left p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.hero-left h2 {
+  margin-top: 0.75rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.buy-btn {
+  margin-top: 2.5rem;
+  padding: 0.8rem 2.2rem;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #7de3d3, #6bb7ff);
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4rem;
+  z-index: 1;
+}
+
+.mannequin-img {
+  width: 70%;
+  max-width: 420px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.mannequin-img.fade {
+  opacity: 0;
+}
+
+/* Arrow button */
+.arrow-btn {
+  position: absolute;
+  bottom: 10%;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #6fd8c9, #55c0b3);
+  color: white;
+  font-size: 24px;
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #bbb;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: #555;
+}
+
+/* ================= TABLETS (768px – 810px) ================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    padding: 4rem 2.5rem 2rem;
+  }
+
+  .hero-right {
+    padding-bottom: 3rem;
+  }
+
+  .mannequin-img {
+    width: 60%;
+  }
+
+  .arrow-btn {
+    bottom: 8%;
+  }
+
+  .dots {
+    bottom: 4%;
+  }
+}
+
+/* ================= MOBILE PHONES (≤ 600px) ================= */
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .hero-curve {
+    width: 90vw;
+    height: 90vw;
+    top: -30%;
+    right: -30%;
+  }
+
+  .hero-left {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-left p {
+    font-size: 0.95rem;
+  }
+
+  .hero-left h2 {
+    font-size: 1.1rem;
+  }
+
+  .buy-btn {
+    margin-top: 2rem;
+    padding: 0.7rem 2rem;
+  }
+
+  .hero-right {
+    padding-bottom: 2.5rem;
+  }
+
+  .mannequin-img {
+    width: 75%;
+    max-width: 280px;
+  }
+
+  .arrow-btn {
+    bottom: 12%;
+    width: 42px;
+    height: 42px;
+  }
+
+  .dots {
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .mannequin-img {
+    width: 80%;
+  }
+}
